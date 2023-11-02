@@ -1,11 +1,17 @@
-Insert the number of meanings: 10 
-Insert the meanings: 
-Unique elements: 2 5 3 
-The symbol of COLUMN: The symbol of X AXIS: The symbol of Y AXIS: 
-5|  *   
- |  *   
-3|  * * 
-2|* * * 
- |* * * 
-  ______
-  3 4 5 
+The number/quantity of meanings: 14 
+The meanings: 4 4 3 5 3 4 5 5 4 4 6 4 4 4 
+Quantity of unique elements: 2 8 3 1 
+The symbol of COLUMN:  *
+The symbol of X AXIS:  _
+The symbol of Y AXIS:  |
+ 
+8|  *     
+ |  *     
+ |  *     
+ |  *     
+ |  *     
+3|  * *   
+2|* * *   
+1|* * * * 
+  ________
+  3 4 5 6 

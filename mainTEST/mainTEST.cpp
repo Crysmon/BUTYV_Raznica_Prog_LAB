@@ -1,5 +1,4 @@
 ﻿// mainTEST.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
 #define _CRT_SECURE_NO_WARNINGS
 #define _CRT_SECURE_NO_DEPRECATE  
 #define _CRT_NONSTDC_NO_DEPRECATE
@@ -69,16 +68,16 @@ int main() {
     char bar_char, axisX_char, axisY_char;              //символы столбцов и "осей"
     int max_value;                                      // max_value - максимальное значение в количестве уникальных цифр/чисел
 
-    printf ("Insert the number of meanings: ");         // мы заранее должны определить количество элементов для массива, N - количесво значений на вход
+    printf ("The number/quantity of meanings: ");         // мы заранее должны определить количество элементов для массива, N - количесво значений на вход
     scanf ("%d", &N);
     printf ("%d \n",N);
-    printf ("Insert the meanings: ");                   //ввод значений, позже будет заменён на импорт из файла
-
+    printf ("The meanings: ");                   //ввод значений, позже будет заменён на импорт из файла
     int *numbers = new int[N];                          // "динамический" массив значений
     for (int i = 0; i < N; i++) {
         scanf ("%d", &numbers[i]);
+        printf("%d ", numbers[i]);
     }
-
+    
     Sortirovka(numbers, N);                             // сортируем элементы по возрастанию
     int count_of_unique_elements = 1;
     //подсчёт количества уникальных элементов
@@ -104,7 +103,7 @@ int main() {
     }
     quantity[count_of_unique_elements - 1] ++;
     //проверка
-    printf("\nUnique elements: ");
+    printf("\nQuantity of unique elements: ");
     for (int i = 0; i < count_of_unique_elements; i++) {
         printf ("%d ", quantity[i]);
     }
@@ -118,11 +117,13 @@ int main() {
 
     printf ("\nThe symbol of COLUMN: ");
     scanf (" %c", &bar_char);
+    printf(" %c\n", bar_char);
     printf ("The symbol of X AXIS: ");
     scanf (" %c", &axisX_char);
+    printf(" %c\n", axisX_char);
     printf("The symbol of Y AXIS: ");
     scanf(" %c", &axisY_char);
-    printf("\n");
+    printf(" %c\n \n", axisY_char);
     //Записываем уникальные элементы массива numbers в новый массив
     totalizer = 0;
     for (int i = 0; i < N - 1; i++) {
@@ -191,14 +192,3 @@ int main() {
 
     return 0;
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-// 4 5 4 3 4 5 4 3 4 4 4 5 4 4 4 6 4
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
